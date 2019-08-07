@@ -5,68 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Maido as a Service</title>
-    <style>
-      .quote {
-        width: 500px;
-        margin: auto;
-        background: #eee;
-        border-radius: 4px;
-        padding: 32px;
-      }
-      p {
-        font-weight: bold;
-        font-size: 24px;
-        margin: 0;
-        padding: 0;
-      }
-
-      footer {
-        width: 500px;
-        margin: auto;
-        padding: 32px;
-        text-align: center;
-      }
-      .quote footer {
-        text-align: left;
-        margin: 8px 0 0 0;
-        padding: 0;
-        opacity: 0.85;
-        font-style: italic;
-      }
-      .paidoans {
-        width: 500px;
-        margin: auto;
-      }
-      .paidoans ul {
-        list-style: none;
-      }
-      .paidoans li {
-        display: inline-block;
-        margin-right: 24px;
-      }
-      .paidoans li a {
-        text-decoration: none;
-        opacity: 0.2;
-      }
-      .paidoans li a:hover {
-        opacity: 1;
-      }
-      .opensource{
-        margin-top: 12px;
-      }
-      a{
-        opacity:0.2;
-        text-decoration: none;
-      }
-      a:hover{
-        opacity:1;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
     <blockquote class="quote">
-      <p id="content"></p>
-      <footer>- <span id="tukang"></span></footer>
+      <header>
+        <div class="avatar">
+          <img src="https://ca.slack-edge.com/T04LU4394-U6H4JAKM3-1ae761a60252-48" alt="samenaide">
+        </div>
+        <div class="heading">
+          <h2 id="tukang"></h2>
+          <span id="username"></span>
+        </div>
+      </header>
+      <article>
+        <p id="content"></p>
+      </article>
     </blockquote>
 
     <footer>
@@ -78,12 +33,15 @@
           target="_blank"
         >
           Open Source - GitHub
-      </a>
+        </a>
       </div>
     </footer>
 
     <nav class="paidoans">
       <ul>
+        <li>
+          <a href="?for=pes">pes</a>
+        </li>
         <li>
           <a href="?for=diet">diet</a>
         </li>
@@ -108,83 +66,6 @@
       </ul>
     </nav>
 
-    <script>
-      const PAIDO_DATA = {
-        "diet": [
-          "Gus, bebek slamet gus!",
-          "Gus, diet gus",
-          "Open BO bebek slamet!",
-          "Ayo ngegym doel!",
-          "Lhoh nakam maneh?"
-        ],
-        "kawin": [
-          "Pasang slambu terosss!!",
-          "Mbak mawar melati, semua dipoligami!",
-          "Pak fuda jodohnya di blitar",
-          "Wayahe... wayahe... wayahe...!!!",
-          "ODMK Orang Dalam Masalah Kesepian."
-        ],
-        "module": [
-          "Gus, module gus.",
-          "Pak fuad module piye pak?",
-          "LHO RILUT KOK RESIGN!",
-          "Pak fuad, zaun error!!!",
-          "Module sopo seng ngerjani?"
-        ],
-        "emje": [
-          "GRESIK GAMBAR TEROSSSS",
-          "Endas e kok miring pak?",
-          "Kok warnane emas itu kuning?",
-          "Mulehan...",
-          "Seng tukang maido iku samenaide, kok aku teross!!!"
-        ],
-        "fe": [
-          "Geist, Zaun down",
-          "REACT TEROSSSSSS",
-          "Amanda: Kok ga bisa diclick ya mz buttonnya",
-          "Standup him, ngegame thok!!!",
-          "Fahim noob ngegame thok"
-        ],
-        "reviewnesia": [
-          "Mas Akbar, CIMB mateq",
-          "Accenture minta platform diupdate ke versi 1.0",
-          "Kubernetesnya kok netes?",
-          "Sesurpris...!!!",
-          "Udah beli aja mas, gaji 30 juta juga!!!"
-        ],
-        "golang": [
-          "Pak go jomblo ya?",
-          "Therezia tanzil itu bukan bu meivi",
-          "STIKI besok ujian pak",
-          "Pak go kok gak pulang?",
-          "Pak Go kapan nikah?"
-        ]
-      };
-      const TUKANG_PAIDOS = [
-        "Samenaide",
-        "Emje",
-        "Rohim",
-        "Cak Fuad",
-        "Sam Pujo"      
-      ];
-      function getPaido(id) {
-        if (!id) return 'BOCIL NOOB!!!'
-        const paidoan = PAIDO_DATA[id];
-        const funRandom = Math.floor(Math.random() * paidoan.length);
-        return PAIDO_DATA[id][funRandom];
-      }
-      function getTukangPaido() {
-        const funRandom = Math.floor(Math.random() * TUKANG_PAIDOS.length);
-        return TUKANG_PAIDOS[funRandom];
-      }
-      
-      const query = new URLSearchParams(window.location.search);
-      const foor = query.get("for");
-      const from = getTukangPaido();
-      const quote = getPaido(foor);
-
-      document.querySelector("#content").innerHTML = quote;
-      document.querySelector("#tukang").innerHTML = from;
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

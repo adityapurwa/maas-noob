@@ -1,0 +1,102 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+.quote {
+  width: 500px;
+  /* min-height: 500px; */
+  margin: auto;
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+  border-radius: 5px;
+  padding: 32px;
+}
+p {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.avatar {
+  height: 46px;
+  width: 46px;
+  padding: 4px;
+  margin: 0;
+  text-align: center;
+}
+.avatar img {
+  height: 44px;
+  width: 44px;
+  text-align: center;
+  border: 1px solid #fefefe;
+  border-radius: 50%;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 8px;
+}
+.heading #tukang {
+  margin: 0;
+  font-weight: 700;
+}
+.heading span {
+  font-weight: 400;
+  color: #697882;
+}
+article {
+  margin-top: 16px;
+}
+article #content {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+footer {
+  width: 500px;
+  margin: auto;
+  padding: 32px;
+  text-align: center;
+}
+.quote footer {
+  text-align: left;
+  margin: 8px 0 0 0;
+  padding: 0;
+  opacity: 0.85;
+  font-style: italic;
+}
+.paidoans {
+  width: 500px;
+  margin: auto;
+}
+.paidoans ul {
+  list-style: none;
+}
+.paidoans li {
+  display: inline-block;
+  margin-right: 24px;
+}
+.paidoans li a {
+  text-decoration: none;
+  opacity: 0.2;
+}
+.paidoans li a:hover {
+  opacity: 1;
+}
+.opensource {
+  margin-top: 12px;
+}
+a {
+  opacity: 0.2;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 1;
+}
