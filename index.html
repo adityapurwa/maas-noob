@@ -51,18 +51,35 @@
       .paidoans li a:hover {
         opacity: 1;
       }
+      .opensource{
+        margin-top: 12px;
+      }
+      a{
+        opacity:0.2;
+        text-decoration: none;
+      }
+      a:hover{        
+        opacity:1;
+      }
     </style>
   </head>
   <body>
     <blockquote class="quote">
       <p id="content"></p>
-      <footer>
-        - <span id="tukang"></span>
-      </footer>
+      <footer>- <span id="tukang"></span></footer>
     </blockquote>
 
     <footer>
       Maido as a Service - Kepanjen Punya &copy; 2048
+      <div class="opensource">
+        <a
+          href="https://github.com/adityapurwa/maas-noob"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Open Source - GitHub
+      </a>
+      </div>
     </footer>
 
     <nav class="paidoans">
@@ -161,16 +178,16 @@
             }
         }
       }
-      function getTukangPaido(){
+      function getTukangPaido() {
         const funRandom = Math.floor(Math.random() * 3);
         switch (funRandom) {
-              case 0:
-                return "Samenaide";
-              case 1:
-                return "Emje";
-              case 2:
-                return "Rohim";
-            }
+          case 0:
+            return "Samenaide";
+          case 1:
+            return "Emje";
+          case 2:
+            return "Rohim";
+        }
       }
       const query = new URLSearchParams(window.location.search);
       const foor = query.get("for");
