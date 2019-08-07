@@ -160,30 +160,27 @@
           "Pak Go kapan nikah?"
         ]
       };
+      const TUKANG_PAIDOS = [
+        "Samenaide",
+        "Emje",
+        "Rohim",
+        "Cak Fuad",
+        "Sam Pujo"      
+      ];
       function getPaido(id) {
         if (!id) return 'BOCIL NOOB!!!'
-        const funRandom = Math.floor(Math.random() * 5);
+        const paidoan = PAIDO_DATA[id];
+        const funRandom = Math.floor(Math.random() * paidoan.length);
         return PAIDO_DATA[id][funRandom];
       }
       function getTukangPaido() {
-        const funRandom = Math.floor(Math.random() * 5);
-        switch (funRandom) {
-          case 0:
-            return "Samenaide";
-          case 1:
-            return "Emje";
-          case 2:
-            return "Rohim";
-          case 3:
-            return "Cak Fuad";
-          case 4:
-            return "Sam Pujo";
-        }
+        const funRandom = Math.floor(Math.random() * TUKANG_PAIDOS.length);
+        return TUKANG_PAIDOS[funRandom];
       }
+      
       const query = new URLSearchParams(window.location.search);
       const foor = query.get("for");
       const from = getTukangPaido();
-
       const quote = getPaido(foor);
 
       document.querySelector("#content").innerHTML = quote;
