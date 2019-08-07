@@ -1,131 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Maido as a Service</title>
     <style>
-        .quote{
-            width: 500px;
-            margin:auto;
-            background:#eee;
-            border-radius:4px;
-            padding:32px;
-        }
-        p{
-            font-weight: bold;
-            font-size:24px;
-            margin:0;
-            padding:0;
-        }
-        
-        footer{
-            width:500px;
-            margin:auto;
-            padding:32px;
-            text-align: center;
-        }
-        .quote footer{
-            text-align: left;
-            margin:8px 0 0 0;
-            padding:0;
-            opacity:0.85;
-            font-style: italic;
-        }
+      .quote {
+        width: 500px;
+        margin: auto;
+        background: #eee;
+        border-radius: 4px;
+        padding: 32px;
+      }
+      p {
+        font-weight: bold;
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+      }
+
+      footer {
+        width: 500px;
+        margin: auto;
+        padding: 32px;
+        text-align: center;
+      }
+      .quote footer {
+        text-align: left;
+        margin: 8px 0 0 0;
+        padding: 0;
+        opacity: 0.85;
+        font-style: italic;
+      }
+      .paidoans {
+        width: 500px;
+        margin: auto;
+      }
+      .paidoans ul {
+        list-style: none;
+      }
+      .paidoans li {
+        display: inline-block;
+        margin-right: 24px;
+      }
+      .paidoans li a {
+        text-decoration: none;
+        opacity: 0.2;
+      }
+      .paidoans li a:hover {
+        opacity: 1;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <blockquote class="quote">
-        <p id="content">
-        </p>
-        <footer>
-            - Samenaide
-        </footer>
+      <p id="content"></p>
+      <footer>
+        - <span id="tukang"></span>
+      </footer>
     </blockquote>
 
     <footer>
-        Maido as a Service - Kepanjen Punya &copy; 2048
+      Maido as a Service - Kepanjen Punya &copy; 2048
     </footer>
 
+    <nav class="paidoans">
+      <ul>
+        <li>
+          <a href="?for=diet">diet</a>
+        </li>
+        <li>
+          <a href="?for=kawin">kawin</a>
+        </li>
+        <li>
+          <a href="?for=module">module</a>
+        </li>
+        <li>
+          <a href="?for=emje">emje</a>
+        </li>
+        <li>
+          <a href="?for=fe">fe</a>
+        </li>
+        <li>
+          <a href="?for=reviewnesia">reviewnesia</a>
+        </li>
+        <li>
+          <a href="?for=golang">gilang</a>
+        </li>
+      </ul>
+    </nav>
+
     <script>
-        function getPaido(id){
-            const funRandom = Math.floor(Math.random() * 3);
-            switch(id){
-                case "diet":
-                    switch(funRandom){
-                        case 0:
-                            return "Gus, bebek slamet gus!";
-                        case 1:
-                            return "Gus, diet gus";
-                        case 2:
-                            return "Open BO bebek slamet!";
-                    }
-                    break;
-                case "kawin":
-                    switch(funRandom){
-                        case 0:
-                            return "Pasang slambu terosss!!";
-                        case 1:
-                            return "Mbak mawar melati, semua dipoligami!";
-                        case 2:
-                            return "Pak fuda jodohnya di blitar";
-                    }
-                case "module":
-                    switch(funRandom){
-                        case 0:
-                            return "Gus, module gus.";
-                        case 1:
-                            return "Pak fuad module piye pak?";
-                        case 2:
-                            return "LHO RILUT KOK RESIGN!";
-                    }
-                case "emje":
-                    switch(funRandom){
-                        case 0:
-                            return "GRESIK GAMBAR TEROSSSS";
-                        case 1:
-                            return "Endas e kok miring pak?";
-                        case 2:
-                            return "Kok warnane emas itu kuning?";
-                    }
-                case "fe":
-                    switch(funRandom){
-                        case 0:
-                            return "Geist, Zaun down";
-                        case 1:
-                            return "REACT TEROSSSSSS";
-                        case 2:
-                            return "Amanda: Kok ga bisa diclick ya mz buttonnya";
-                    }
-                case "reviewnasia":
-                    switch(funRandom){
-                        case 0:
-                            return "Mas Akbar, CIMB mateq";
-                        case 1:
-                            return "Accenture minta platform diupdate ke versi 1.0";
-                        case 2:
-                            return "Kubernetesnya kok netes?";
-                    }
-                case "golang":
-                    switch(funRandom){
-                        case 0:
-                            return "Pak go jomblo ya?";
-                        case 1:
-                            return "Therezia tanzil itu bukan bu meivi";
-                        case 2:
-                            return "STIKI besok ujian pak";
-                    }
+      function getPaido(id) {
+        const funRandom = Math.floor(Math.random() * 3);
+        switch (id) {
+          case "diet":
+            switch (funRandom) {
+              case 0:
+                return "Gus, bebek slamet gus!";
+              case 1:
+                return "Gus, diet gus";
+              case 2:
+                return "Open BO bebek slamet!";
+            }
+            break;
+          case "kawin":
+            switch (funRandom) {
+              case 0:
+                return "Pasang slambu terosss!!";
+              case 1:
+                return "Mbak mawar melati, semua dipoligami!";
+              case 2:
+                return "Pak fuda jodohnya di blitar";
+            }
+          case "module":
+            switch (funRandom) {
+              case 0:
+                return "Gus, module gus.";
+              case 1:
+                return "Pak fuad module piye pak?";
+              case 2:
+                return "LHO RILUT KOK RESIGN!";
+            }
+          case "emje":
+            switch (funRandom) {
+              case 0:
+                return "GRESIK GAMBAR TEROSSSS";
+              case 1:
+                return "Endas e kok miring pak?";
+              case 2:
+                return "Kok warnane emas itu kuning?";
+            }
+          case "fe":
+            switch (funRandom) {
+              case 0:
+                return "Geist, Zaun down";
+              case 1:
+                return "REACT TEROSSSSSS";
+              case 2:
+                return "Amanda: Kok ga bisa diclick ya mz buttonnya";
+            }
+          case "reviewnesia":
+            switch (funRandom) {
+              case 0:
+                return "Mas Akbar, CIMB mateq";
+              case 1:
+                return "Accenture minta platform diupdate ke versi 1.0";
+              case 2:
+                return "Kubernetesnya kok netes?";
+            }
+          case "golang":
+            switch (funRandom) {
+              case 0:
+                return "Pak go jomblo ya?";
+              case 1:
+                return "Therezia tanzil itu bukan bu meivi";
+              case 2:
+                return "STIKI besok ujian pak";
             }
         }
-        const query = new URLSearchParams(window.location.search);
-        const foor =query.get("for");
-        const from = query.get("from");
+      }
+      function getTukangPaido(){
+        const funRandom = Math.floor(Math.random() * 3);
+        switch (funRandom) {
+              case 0:
+                return "Samenaide";
+              case 1:
+                return "Emje";
+              case 2:
+                return "Rohim";
+            }
+      }
+      const query = new URLSearchParams(window.location.search);
+      const foor = query.get("for");
+      const from = getTukangPaido();
 
-        const quote = getPaido(foor);
+      const quote = getPaido(foor);
 
-        document.querySelector('#content').innerHTML = quote;
-        
+      document.querySelector("#content").innerHTML = quote;
+      document.querySelector("#tukang").innerHTML = from;
     </script>
-</body>
+  </body>
 </html>
