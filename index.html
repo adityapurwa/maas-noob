@@ -58,7 +58,7 @@
         opacity:0.2;
         text-decoration: none;
       }
-      a:hover{        
+      a:hover{
         opacity:1;
       }
     </style>
@@ -109,77 +109,64 @@
     </nav>
 
     <script>
+      const PAIDO_DATA = {
+        "diet": [
+          "Gus, bebek slamet gus!",
+          "Gus, diet gus",
+          "Open BO bebek slamet!",
+          "Ayo ngegym doel!",
+          "Lhoh nakam maneh?"
+        ],
+        "kawin": [
+          "Pasang slambu terosss!!",
+          "Mbak mawar melati, semua dipoligami!",
+          "Pak fuda jodohnya di blitar",
+          "Wayahe... wayahe... wayahe...!!!",
+          "ODMK Orang Dalam Masalah Kesepian."
+        ],
+        "module": [
+          "Gus, module gus.",
+          "Pak fuad module piye pak?",
+          "LHO RILUT KOK RESIGN!",
+          "Pak fuad, zaun error!!!",
+          "Module sopo seng ngerjani?"
+        ],
+        "emje": [
+          "GRESIK GAMBAR TEROSSSS",
+          "Endas e kok miring pak?",
+          "Kok warnane emas itu kuning?",
+          "Mulehan...",
+          "Seng tukang maido iku samenaide, kok aku teross!!!"
+        ],
+        "fe": [
+          "Geist, Zaun down",
+          "REACT TEROSSSSSS",
+          "Amanda: Kok ga bisa diclick ya mz buttonnya",
+          "Standup him, ngegame thok!!!",
+          "Fahim noob ngegame thok"
+        ],
+        "reviewnesia": [
+          "Mas Akbar, CIMB mateq",
+          "Accenture minta platform diupdate ke versi 1.0",
+          "Kubernetesnya kok netes?",
+          "Sesurpris...!!!",
+          "Udah beli aja mas, gaji 30 juta juga!!!"
+        ],
+        "golang": [
+          "Pak go jomblo ya?",
+          "Therezia tanzil itu bukan bu meivi",
+          "STIKI besok ujian pak",
+          "Pak go kok gak pulang?",
+          "Pak Go kapan nikah?"
+        ]
+      };
       function getPaido(id) {
-        const funRandom = Math.floor(Math.random() * 3);
-        switch (id) {
-          case "diet":
-            switch (funRandom) {
-              case 0:
-                return "Gus, bebek slamet gus!";
-              case 1:
-                return "Gus, diet gus";
-              case 2:
-                return "Open BO bebek slamet!";
-            }
-            break;
-          case "kawin":
-            switch (funRandom) {
-              case 0:
-                return "Pasang slambu terosss!!";
-              case 1:
-                return "Mbak mawar melati, semua dipoligami!";
-              case 2:
-                return "Pak fuda jodohnya di blitar";
-            }
-          case "module":
-            switch (funRandom) {
-              case 0:
-                return "Gus, module gus.";
-              case 1:
-                return "Pak fuad module piye pak?";
-              case 2:
-                return "LHO RILUT KOK RESIGN!";
-            }
-          case "emje":
-            switch (funRandom) {
-              case 0:
-                return "GRESIK GAMBAR TEROSSSS";
-              case 1:
-                return "Endas e kok miring pak?";
-              case 2:
-                return "Kok warnane emas itu kuning?";
-            }
-          case "fe":
-            switch (funRandom) {
-              case 0:
-                return "Geist, Zaun down";
-              case 1:
-                return "REACT TEROSSSSSS";
-              case 2:
-                return "Amanda: Kok ga bisa diclick ya mz buttonnya";
-            }
-          case "reviewnesia":
-            switch (funRandom) {
-              case 0:
-                return "Mas Akbar, CIMB mateq";
-              case 1:
-                return "Accenture minta platform diupdate ke versi 1.0";
-              case 2:
-                return "Kubernetesnya kok netes?";
-            }
-          case "golang":
-            switch (funRandom) {
-              case 0:
-                return "Pak go jomblo ya?";
-              case 1:
-                return "Therezia tanzil itu bukan bu meivi";
-              case 2:
-                return "STIKI besok ujian pak";
-            }
-        }
+        if (!id) return 'BOCIL NOOB!!!'
+        const funRandom = Math.floor(Math.random() * 5);
+        return PAIDO_DATA[id][funRandom];
       }
       function getTukangPaido() {
-        const funRandom = Math.floor(Math.random() * 3);
+        const funRandom = Math.floor(Math.random() * 5);
         switch (funRandom) {
           case 0:
             return "Samenaide";
@@ -187,6 +174,10 @@
             return "Emje";
           case 2:
             return "Rohim";
+          case 3:
+            return "Cak Fuad";
+          case 4:
+            return "Sam Pujo";
         }
       }
       const query = new URLSearchParams(window.location.search);
