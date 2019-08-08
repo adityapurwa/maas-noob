@@ -56,7 +56,21 @@ const PAIDOS = {
     "Sudah siap kalah pak Reza?",
     "Pak Reza sudah gak bisa berkata-kata",
     "Fahim maen thok"
-  ]
+  ],
+  "bunul": [
+    "Ayoo bunul pak fuda.",
+    "Ndasku telu pak",
+    "Bunul opo sate pronorogo gaes?",
+    "Nakam ora nakam seng penting bunul",
+    "Mending tuku bunul timbang tuku weduse."
+  ],
+  "mie": [
+    "Mie fahmi aku suka makan emie...",
+    "Fahmi bendino nakam mie",
+    "Pak edi, mie ne dientekno Fahim",
+    "Mie sedap is better than Indomie :noob:",
+    "Esok awan sore mangan mie, ben koyok Fahmi."
+  ],
 };
 const TUKANG_PAIDOS = [
   {
@@ -78,6 +92,10 @@ const TUKANG_PAIDOS = [
   {
     username: "nurcahyopujo",
     value: "Sam Pujo"
+  },
+  {
+    username: "f_idriz",
+    value: "Fahim"
   }
 ];
 function getPaido(id) {
