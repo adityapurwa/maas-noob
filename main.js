@@ -69,7 +69,8 @@ const PAIDOS = {
     "Fahmi bendino nakam mie",
     "Pak edi, mie ne dientekno Fahim",
     "Mie sedap is better than Indomie :noob:",
-    "Esok awan sore mangan mie, ben koyok Fahmi."
+    "Esok awan sore mangan mie, ben koyok Fahmi.",
+    "Senior Engineer kok mangan e pop mie!"
   ],
 };
 const TUKANG_PAIDOS = [
