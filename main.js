@@ -72,12 +72,12 @@ const PAIDOS = {
     "Esok awan sore mangan mie, ben koyok Fahmi.",
     "Senior Engineer kok mangan e pop mie!",
   ],
-  ctlyst: [
+  anuan: [
     "Revamp terosss",
-    "Pak fuda, ctylst piye pak?",
-    "Gimana kabar bepejees gaes?",
+    "Pak fuda, Anuan piye pak?",
+    "Gimana kabar befezeez gaes?",
     "Revamp kok nggae react noob",
-    "Gimana pak fuad sebagai payment developer?",
+    "Gimana pak fuda sebagai payment developer?",
   ],
 };
 const TUKANG_PAIDOS = [
